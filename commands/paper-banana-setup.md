@@ -38,8 +38,15 @@ test -f ~/PaperBanana/configs/model_config.yaml && echo "config exists" || \
 **Step 4: Check if API key is set**
 
 ```bash
-grep -c "your_api_key\|YOUR_KEY\|placeholder\|REPLACE" \
-  ~/PaperBanana/configs/model_config.yaml && echo "needs configuration" || echo "configured"
+python3 -c "
+import yaml, sys
+with open('$HOME/PaperBanana/configs/model_config.yaml') as f:
+    cfg = yaml.safe_load(f)
+d = cfg.get('defaults', {})
+keys = cfg.get('api_keys', {})
+missing = not d.get('model_name') or not d.get('image_model_name') or not any(keys.values())
+print('needs configuration' if missing else 'configured')
+"
 ```
 
 **Step 5: Report to user**
