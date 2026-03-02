@@ -1,0 +1,7 @@
+{
+  "name": "paper-banana",
+  "description": "Generate publication-quality scientific diagrams and plots using the PaperBanana multi-agent pipeline. Includes /paper-banana and /paper-banana-setup commands.",
+  "author": {
+    "name": "daniellusk"
+  }
+}
