@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "paper-banana-plugin",
+  "description": "Claude Code plugin for PaperBanana scientific figure generation",
+  "owner": {
+    "name": "danieldoesbio"
+  },
+  "plugins": [
+    {
+      "name": "paper-banana",
+      "source": "./",
+      "description": "Generate publication-quality scientific diagrams and plots using the PaperBanana multi-agent pipeline. Includes /paper-banana and /paper-banana-setup commands.",
+      "author": {
+        "name": "danieldoesbio"
+      },
+      "homepage": "https://github.com/danieldoesbio/paper-banana-plugin",
+      "repository": "https://github.com/danieldoesbio/paper-banana-plugin",
+      "license": "Apache-2.0",
+      "category": "scientific",
+      "tags": ["science", "figures", "diagrams", "quarto", "research"]
+    }
+  ]
+}
